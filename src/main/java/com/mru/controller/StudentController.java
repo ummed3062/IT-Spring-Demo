@@ -56,6 +56,20 @@ public class StudentController {
 
 
 
+    @PostMapping("/students")
+    String details(@RequestBody Student student) {
+
+        int id = student.getId();
+        String name = student.getName();
+        int age = student.getAge();
+        String department = student.getDepartment();
+        String address = student.getAddress();
+
+
+        
+        return "Details: ID: " + id + ", Name: " + name + ", Age: " + age + ", Department: " + department + ", Address: " + address;
+    }
+
 
 
 
